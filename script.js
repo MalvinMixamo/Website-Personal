@@ -314,7 +314,7 @@ function addItemInProdukContainer(){
         countPlus.appendChild(countButton);
         countButton.appendChild(ikonPlus);
         
-        document.getElementById('list-item').appendChild(itemProduk);
+        document.getElementById('container-produk').appendChild(itemProduk);
     }
     for (let kodeProduk in products) {
         if (products.hasOwnProperty(kodeProduk)) {

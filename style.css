@@ -94,7 +94,6 @@ body{
   font-style: italic;
   font-weight: 700;
   font-family: 'poppins', sans-serif;
-  width: 280px;
   padding-right: 43.665px;
   padding-left: 43.665px;
   font-size: 64px;
@@ -111,6 +110,7 @@ body{
   color: white;
   justify-content: center;
 }
+
 #no-margin{
   margin: 5px;
 }
@@ -127,9 +127,21 @@ body{
 }
 #Pemasukan{
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   display: flex;
+  animation: pemasukan 5s ease infinite;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
+#Pengeluaran{
+  flex-direction: row;
+  flex-wrap: nowrap;
+  display: flex;
+  animation: pengeluaran 5s ease infinite;
+  align-content: center;
+  justify-content: center;
+  align-items: center;}
 #laporan-container span{
   font-size: 32px;
   font-weight: 700;
@@ -257,6 +269,14 @@ body{
     justify-content: space-around;
     align-items: stretch;
     margin-left: 20px;
+    width: 75%;
+  }
+  #alamat{
+    margin-top: 10px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    width: 100%;
+    transition: width 0.5s ease 0s;
   }
   #toko-profil{
     display: flex;
@@ -320,4 +340,88 @@ nav {
   
   section {
     padding-top: 60px; /* Tambahkan padding agar konten tidak tertutup navbar */
+  }
+  #bukaFormProduk{
+    width: 100%;
+    height: 140px;
+    margin-top: 50px;
+    border-radius: 141px;
+    color: white;
+    background-color: #0049D1;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  @keyframes pemasukan{
+    0%{
+      opacity: 100%;
+      transform: translateY(10px);
+    }
+    50%{
+      opacity: 0%;
+      transform: translateY(-30px);
+    }
+    75%{
+      opacity: 0%;
+      transform: translateY(60px);
+    }
+    100%{
+      opacity: 100%;
+      transform: translateY(10px);
+    }
+
+  }
+  @keyframes pengeluaran{
+    0%{
+      opacity: 0%;
+      transform: translateY(10px);
+    }
+    50%{
+      opacity: 100%;
+      transform: translateY(-30px);
+    }
+    75%{
+      opacity: 0%;
+      transform: translateY(-60px);
+    }
+    100%{
+      opacity: 0%;
+      transform: translateY(10px);
+    }
+
+  }
+  @media screen and (max-width: 480px) {
+    .kasir span{
+      font-size: 24px;
+
+    }
+    .laporan{
+      margin-left: 5px;
+    }
+  }
+  @media screen and (max-width: 744px){
+    body{
+      padding: 0;
+    }
+    .tokoUser{
+      padding: 30px;
+      height: 97px;
+      flex-wrap: nowrap;
+    }
+    #toko-profil img{
+      width: 77px;
+      height: 77px;
+    }
+    .windowLink{
+      width: 319px;
+      height: 319px;
+      margin-left: 10px;
+    }
+    #informasi-container{
+      margin-left: 10px;
+    }
+    #landingPage{
+      margin-left: 21px;
+      margin-right: 21px;
+    }
   }
